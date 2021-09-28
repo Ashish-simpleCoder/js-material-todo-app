@@ -46,7 +46,7 @@ body.light_theme{
 }
 :root{
 
-    --font-size:clamp(2rem,2.5rem,2.5vw);
+    --font-size:clamp(2.3rem,2.5rem,2.5vw);
     --pad:clamp(0.8rem,1rem,1vw);
     --radius:0.3rem;
 
@@ -92,7 +92,7 @@ form#todo_inputs{
     justify-content: center;
     padding:clamp(2rem,2.5rem,2.5vw);
     input,button{
-        font-size:clamp(1.5rem,1.8rem,1.8vw);
+        font-size:clamp(1.6rem,1.8rem,1.8vw);
         box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.4);
         border-radius: var(--radius);
     }
@@ -128,14 +128,14 @@ div.each_todo{
     box-shadow: 0 0.3rem 0.6rem rgba(0,0,0,0.4);
     margin:clamp(0.6rem,1rem,1vw) auto;
     background:var(--note-bg);
-    padding:clamp(0.1rem,0.3rem,0.3vw);
+    padding:clamp(0.3rem,0.5rem,0.5vw);
     max-width: 60rem;
     word-wrap: break-word;
     border-radius: var(--radius);
     h3{
         flex:1;
         margin-left:0.5rem;
-        font-size: clamp(1.3rem,1.5rem,1.5vw);
+        font-size: clamp(1.5rem,1.7rem,1.7vw);
         font-weight: 500;
     }
     button{
