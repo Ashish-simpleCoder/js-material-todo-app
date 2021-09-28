@@ -56,6 +56,54 @@ body.light_theme {
   --note-bg:white;
 }
 
+@-webkit-keyframes insertion {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    background: var(--pr-70);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes insertion {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    background: var(--pr-70);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes deletion {
+  to {
+    -webkit-transform: translateY(15rem) rotate(-20deg);
+            transform: translateY(15rem) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes deletion {
+  to {
+    -webkit-transform: translateY(15rem) rotate(-20deg);
+            transform: translateY(15rem) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
 :root {
   --font-size:clamp(2.3rem,2.5rem,2.5vw);
   --pad:clamp(0.8rem,1rem,1vw);

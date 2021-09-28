@@ -46,6 +46,24 @@ body.light_theme{
     --btn-bg:rgb(0, 128, 53);
     --note-bg:white;
 }
+@keyframes insertion{
+    0%{
+        transform:scale(0.9);
+        background: var(--pr-70);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    0%{
+        transform:scale(1);
+    }
+}
+@keyframes deletion{
+    to{
+        transform: translateY(15rem) rotate(-20deg);
+        opacity: 0;
+    }
+}
 :root{
 
     --font-size:clamp(2.3rem,2.5rem,2.5vw);
@@ -137,6 +155,7 @@ div.each_todo{
     word-wrap: break-word;
     border-radius: var(--radius);
     transition:background 0.25s ease  0.2s;
+    // transition:all 0.3s ease;
     h3{
         flex:1;
         margin-left:0.5rem;
