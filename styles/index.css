@@ -111,7 +111,7 @@ form#todo_inputs {
 }
 
 form#todo_inputs input, form#todo_inputs button {
-  font-size: clamp(1.6rem, 1.8rem, 1.8vw);
+  font-size: clamp(1.8rem, 2rem, 2vw);
   -webkit-box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
   border-radius: var(--radius);
@@ -165,7 +165,7 @@ div.each_todo h3 {
       -ms-flex: 1;
           flex: 1;
   margin-left: 0.5rem;
-  font-size: clamp(1.5rem, 1.7rem, 1.7vw);
+  font-size: clamp(1.8rem, 2rem, 2vw);
   font-weight: 500;
 }
 
