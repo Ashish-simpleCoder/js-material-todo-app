@@ -12,6 +12,7 @@ html{
 }
 body{
     background:var(--body-bg);
+    transition:background 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 button{
@@ -22,6 +23,7 @@ button{
     font-size: clamp(1.4rem,1.6rem,1.6vw);
     letter-spacing:0;
     border-radius: var(--radius);
+    color:white;
 }
 .completed{
     background:rgb(29, 48, 48) !important;
@@ -37,16 +39,34 @@ button{
     }
 }
 body.light_theme{
-    --body-bg:var(--pr-95);
+    --body-bg:var(--pr-98);
     --border:var(--pr-20);
     --clr:var(--pr-5);
     --input-bg:white;
     --btn-bg:rgb(0, 128, 53);
     --note-bg:white;
 }
+@keyframes insertion{
+    0%{
+        transform:scale(0.9);
+        background: var(--pr-70);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    0%{
+        transform:scale(1);
+    }
+}
+@keyframes deletion{
+    to{
+        transform: translateY(15rem) rotate(-20deg);
+        opacity: 0;
+    }
+}
 :root{
 
-    --font-size:clamp(2rem,2.5rem,2.5vw);
+    --font-size:clamp(2.3rem,2.5rem,2.5vw);
     --pad:clamp(0.8rem,1rem,1vw);
     --radius:0.3rem;
 
@@ -62,6 +82,7 @@ body.light_theme{
     --pr-80:hsl(258, 100%, 80%);
     --pr-90:hsl(258, 100%, 90%);
     --pr-95:hsl(258, 100%, 95%);
+    --pr-98:hsl(258, 100%, 98%);
 
     --body-bg:var(--pr-15);
     --border:var(--pr-20);
@@ -90,10 +111,10 @@ form#todo_inputs{
     display:flex;
     align-items:center;
     justify-content: center;
-    padding:clamp(2rem,2.5rem,2.5vw);
+    padding:0 clamp(2rem,2.5rem,2.5vw);
     input,button{
-        font-size:clamp(1.5rem,1.8rem,1.8vw);
-        box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.4);
+        font-size:clamp(1.8rem,2rem,2vw);
+        box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.2);
         border-radius: var(--radius);
     }
     input{
@@ -101,9 +122,9 @@ form#todo_inputs{
         padding:clamp(0.5rem,0.8rem,0.8vw);
         background: var(--input-bg);
         margin-right: 1rem;
+        transition:background 0.25s ease  0.1s;
     }
     button{
-        // border:1px solid red;
         background:var(--btn-bg);
         padding:clamp(0.5rem,0.8rem,0.8vw) clamp(1rem,2rem,2vw);
         font-weight:bold;
@@ -117,7 +138,8 @@ section#todo_output{
 h3#output_heading{
     font-size:clamp(2rem,2.5rem,2.5vw);
     font-weight: 500;
-    padding:var(--pad) clamp(2rem,2.5rem,2.5vw);;
+    padding:var(--pad) clamp(2rem,2.5rem,2.5vw);
+    margin-top: 1rem;
     border-bottom:1px solid var(--border);
 }
 
@@ -125,17 +147,19 @@ h3#output_heading{
 div.each_todo{
     display:flex;
     align-items:center;
-    box-shadow: 0 0.3rem 0.6rem rgba(0,0,0,0.4);
-    margin:clamp(0.6rem,1rem,1vw) auto;
+    box-shadow: 0 0.3rem 0.4rem rgba(0,0,0,0.2);
+    margin:clamp(1.7rem,1.8rem,1.8vw) auto;
     background:var(--note-bg);
-    padding:clamp(0.1rem,0.3rem,0.3vw);
+    padding:clamp(0.5rem,0.6rem,0.6vw);
     max-width: 60rem;
     word-wrap: break-word;
     border-radius: var(--radius);
+    transition:background 0.25s ease  0.2s;
+    // transition:all 0.3s ease;
     h3{
         flex:1;
         margin-left:0.5rem;
-        font-size: clamp(1.3rem,1.5rem,1.5vw);
+        font-size: clamp(1.8rem,2rem,2vw);
         font-weight: 500;
     }
     button{

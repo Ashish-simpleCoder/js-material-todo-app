@@ -8,8 +8,11 @@ export default async function todoGenerator(todo_obj,fromLocal){
     div.querySelector('.edit_btn').addEventListener('click',async function(e){
         (await import('./saveEditedTodo.js')).default(div,this)
     })
-    div.querySelector('.delete_btn').addEventListener('click',async function(e){
-        (await import('./deleteTodo.js')).default(div)
+    div.querySelector('.delete_btn').addEventListener('click',function(e){
+        div.style.animation = 'deletion 0.3s ease forwards'
+        div.addEventListener('animationend',async ()=>{
+            (await import('./deleteTodo.js')).default(div)
+        })
     })
     div.querySelector('.check_btn').addEventListener('click',function(e){
         let user_todos = JSON.parse(localStorage.getItem('user_todos'))
@@ -28,8 +31,15 @@ export default async function todoGenerator(todo_obj,fromLocal){
         }
     })
 
-    if(fromLocal) todo_output.append(div)
-    else todo_output.insertAdjacentElement('afterbegin',div)
+    div.style.animation = 'insertion 0.3s ease forwards'
+    if(fromLocal) {
+        todo_output.append(div)
+    }
+    else {
+        todo_output.insertAdjacentElement('afterbegin',div)
+        // div.addEventListener('animationend',()=>{
+        // })
+    }
     if(!fromLocal){
         const saveToLocalStorage = await import('./saveToLocalStorage.js')
         saveToLocalStorage.default(todo_obj)
