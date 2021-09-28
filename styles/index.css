@@ -152,7 +152,7 @@ div.each_todo {
           align-items: center;
   -webkit-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
-  margin: clamp(0.6rem, 1rem, 1vw) auto;
+  margin: clamp(1.4rem, 1.6rem, 1.6vw) auto;
   background: var(--note-bg);
   padding: clamp(0.3rem, 0.5rem, 0.5vw);
   max-width: 60rem;
