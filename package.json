@@ -1,0 +1,23 @@
+{
+  "name": "6_material_todo_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish-simpleCoder/js-material-todo-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ashish-simpleCoder/js-material-todo-app/issues"
+  },
+  "homepage": "https://github.com/Ashish-simpleCoder/js-material-todo-app#readme",
+  "description": "",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
