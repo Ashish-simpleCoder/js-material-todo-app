@@ -54,7 +54,7 @@ body.light_theme {
 }
 
 :root {
-  --font-size:clamp(1.8rem,2rem,2vw);
+  --font-size:clamp(2rem,2.5rem,2.5vw);
   --pad:clamp(0.8rem,1rem,1vw);
   --radius:0.3rem;
   --pr-5:hsl(258, 100%, 5%);
@@ -170,5 +170,6 @@ div.each_todo h3 {
 
 div.each_todo button {
   margin-right: 0.1rem;
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */
