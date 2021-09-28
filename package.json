@@ -2,8 +2,9 @@
   "name": "6_material_todo_app",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://ashish-simplecoder.github.io/js-material-todo-app/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist",
   },
   "keywords": [],
   "author": "",
@@ -15,8 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ashish-simpleCoder/js-material-todo-app/issues"
   },
-  "homepage": "https://github.com/Ashish-simpleCoder/js-material-todo-app#readme",
-  "description": "",
+
+  "description": "todo app made with vanilla js",
   "dependencies": {
     "gh-pages": "^3.2.3"
   }
