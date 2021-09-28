@@ -12,6 +12,7 @@ html{
 }
 body{
     background:var(--body-bg);
+    transition:background 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 button{
@@ -22,6 +23,7 @@ button{
     font-size: clamp(1.4rem,1.6rem,1.6vw);
     letter-spacing:0;
     border-radius: var(--radius);
+    color:white;
 }
 .completed{
     background:rgb(29, 48, 48) !important;
@@ -91,10 +93,10 @@ form#todo_inputs{
     display:flex;
     align-items:center;
     justify-content: center;
-    padding:clamp(2rem,2.5rem,2.5vw);
+    padding:0 clamp(2rem,2.5rem,2.5vw);
     input,button{
         font-size:clamp(1.8rem,2rem,2vw);
-        box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.4);
+        box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.2);
         border-radius: var(--radius);
     }
     input{
@@ -102,6 +104,7 @@ form#todo_inputs{
         padding:clamp(0.5rem,0.8rem,0.8vw);
         background: var(--input-bg);
         margin-right: 1rem;
+        transition:background 0.25s ease  0.1s;
     }
     button{
         background:var(--btn-bg);
@@ -117,7 +120,8 @@ section#todo_output{
 h3#output_heading{
     font-size:clamp(2rem,2.5rem,2.5vw);
     font-weight: 500;
-    padding:var(--pad) clamp(2rem,2.5rem,2.5vw);;
+    padding:var(--pad) clamp(2rem,2.5rem,2.5vw);
+    margin-top: 1rem;
     border-bottom:1px solid var(--border);
 }
 
@@ -126,12 +130,13 @@ div.each_todo{
     display:flex;
     align-items:center;
     box-shadow: 0 0.3rem 0.4rem rgba(0,0,0,0.2);
-    margin:clamp(1.5rem,1.7rem,1.7vw) auto;
+    margin:clamp(1.7rem,1.8rem,1.8vw) auto;
     background:var(--note-bg);
     padding:clamp(0.5rem,0.6rem,0.6vw);
     max-width: 60rem;
     word-wrap: break-word;
     border-radius: var(--radius);
+    transition:background 0.25s ease  0.2s;
     h3{
         flex:1;
         margin-left:0.5rem;
